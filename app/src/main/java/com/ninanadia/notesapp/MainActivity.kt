@@ -9,10 +9,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        //mengatur tampilan nama dari action bar aplikasi kita, dimana nantinya
-        //action bar akan menyesuakan dari fragment yang kita buka
-        setupActionBarWithNavController(findNavController(R.id.navHostFragment))
+        setupActionBarWithNavController(findNavController(R.id.nav_host_fragment))
     }
 
     /**
@@ -26,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     navigasi yang sudah dibuat
      */
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.navHostFragment)
+        val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }
